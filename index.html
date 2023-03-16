@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task List</title>
+	<!-- Add CSS and Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Task List</h1>
+		<form id="addTaskForm">
+			<div class="form-group">
+				<label for="taskTitle">Task Title</label>
+				<input type="text" class="form-control" id="taskTitle" placeholder="Enter task title">
+			</div>
+			<div class="form-group">
+				<label for="taskPriority">Task Priority</label>
+				<select class="form-control" id="taskPriority">
+					<option value="low">Low</option>
+					<option value="medium">Medium</option>
+					<option value="high">High</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="taskStatus">Task Status</label>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="taskStatus" id="taskStatusPending" value="pending" checked>
+					<label class="form-check-label" for="taskStatusPending">
+						Pending
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="taskStatus" id="taskStatusCompleted" value="completed">
+					<label class="form-check-label" for="taskStatusCompleted">
+						Completed
+					</label>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Add Task</button>
+		</form>
+		<ul id="taskList" class="list-group mt-4"></ul>
+	</div>
+	<!-- Add JavaScript -->
+	<script src="script.js"></script>
+</body>
+</html>
